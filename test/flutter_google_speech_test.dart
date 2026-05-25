@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -25,6 +26,7 @@ void main() {
     setUpAll(() {
       when(jsonFile.existsSync()).thenReturn(true);
       when(jsonFile.path).thenReturn('test.json');
+      when(jsonFile.readAsStringSync()).thenReturn(json);
     });
 
     test(
@@ -57,4 +59,13 @@ void main() {
   });
 }
 
-class _FileMock extends Mock implements File {}
+class _FileMock extends Mock implements File {
+  @override
+  bool existsSync() => super.noSuchMethod(Invocation.method(#existsSync, []), returnValue: false);
+
+  @override
+  String get path => super.noSuchMethod(Invocation.getter(#path), returnValue: '');
+
+  @override
+  String readAsStringSync({Encoding encoding = utf8}) => super.noSuchMethod(Invocation.method(#readAsStringSync, [], {#encoding: encoding}), returnValue: '');
+}
