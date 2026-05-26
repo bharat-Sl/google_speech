@@ -49,8 +49,8 @@ class Struct extends $pb.GeneratedMessage with $mixin.StructMixin {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.protobuf'),
       createEmptyInstance: create,
-      toProto3Json: $mixin.StructMixin.toProto3JsonHelper,
-      fromProto3Json: $mixin.StructMixin.fromProto3JsonHelper)
+      
+      )
     ..m<$core.String, Value>(1, _omitFieldNames ? '' : 'fields',
         entryClassName: 'Struct.FieldsEntry',
         keyFieldType: $pb.PbFieldType.OS,
@@ -154,8 +154,8 @@ class Value extends $pb.GeneratedMessage with $mixin.ValueMixin {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.protobuf'),
       createEmptyInstance: create,
-      toProto3Json: $mixin.ValueMixin.toProto3JsonHelper,
-      fromProto3Json: $mixin.ValueMixin.fromProto3JsonHelper)
+      
+      )
     ..oo(0, [1, 2, 3, 4, 5, 6])
     ..e<NullValue>(1, _omitFieldNames ? '' : 'nullValue', $pb.PbFieldType.OE,
         defaultOrMaker: NullValue.NULL_VALUE,
@@ -304,8 +304,8 @@ class ListValue extends $pb.GeneratedMessage with $mixin.ListValueMixin {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.protobuf'),
       createEmptyInstance: create,
-      toProto3Json: $mixin.ListValueMixin.toProto3JsonHelper,
-      fromProto3Json: $mixin.ListValueMixin.fromProto3JsonHelper)
+      
+      )
     ..pc<Value>(1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
         subBuilder: Value.create)
     ..hasRequiredFields = false;

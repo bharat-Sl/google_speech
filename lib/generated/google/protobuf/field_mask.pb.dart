@@ -236,8 +236,8 @@ class FieldMask extends $pb.GeneratedMessage with $mixin.FieldMaskMixin {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'google.protobuf'),
       createEmptyInstance: create,
-      toProto3Json: $mixin.FieldMaskMixin.toProto3JsonHelper,
-      fromProto3Json: $mixin.FieldMaskMixin.fromProto3JsonHelper)
+      
+      )
     ..pPS(1, _omitFieldNames ? '' : 'paths')
     ..hasRequiredFields = false;
 
